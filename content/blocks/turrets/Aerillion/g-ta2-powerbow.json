@@ -1,0 +1,260 @@
+{
+    "type": "PowerTurret",
+    "targetAir": true,
+    "targetGround": true,
+    "size": 2,
+    "range": 192,
+    "health": 480,
+    "reload": 60,
+    "recoil": 2,
+    "inaccuracy": 0,
+    "shootSound": "laser",
+    "shootY": 7,
+    "minWarmup": 0.90,
+    "shootWarmupSpeed": 0.015,
+    "warmupMaintainTime": 120,
+    "shootType": {
+      "type": "BulletType",
+      "speed": 10,
+      "ignoreArmor": true,
+      "hittable": false,
+      "reflectable": false,
+      "absorbable": false,
+      "lifetime": 19.2,
+      "damage": 84,
+      "pierce": true,
+      "pierceBuilding": true,
+      "pierceDamageFactor": 0.5,
+      "shootEffect": "none",
+      "smokeEffect": "none",
+      "hitEffect": {
+        "type": "ParticleEffect",
+        "rotWithParent": true,
+        "cone": 20,
+        "lifetime": 10,
+        "particles": 5,
+        "length": 30,
+        "colorFrom": "FFA9A9",
+        "colorTo": "FFA9A9",
+        "line": true,
+        "strokeFrom": 4,
+        "lenFrom": 6,
+        "layer": 110,
+        "baseRotation": 180
+      },
+      "despawnEffect": {
+        "type": "ParticleEffect",
+        "rotWithParent": true,
+        "cone": 20,
+        "lifetime": 10,
+        "particles": 5,
+        "length": 30,
+        "colorFrom": "FFA9A9",
+        "colorTo": "FFA9A9",
+        "line": true,
+        "strokeFrom": 4,
+        "lenFrom": 6,
+        "layer": 110,
+        "baseRotation": 180
+      },
+      "pierceCap": 3,
+      "status": "slow",
+      "statusDuration": 30,
+      "parts": [
+        {
+          "type": "RegionPart",
+          "name": "mindustry-expansion-powerbow-arrow",
+          "layer": 110,
+          "color": "FFA9A9",
+          "yScl": 2.7,
+          "y": -10,
+          "outline": false
+        }
+      ]
+    },
+    "rotateSpeed": 4,
+    "consumes": {
+      "power": 3.3333333333333
+    },
+    "requirements": [
+      "copper/50",
+      "lead/60",
+      "silicon/30"
+    ],
+    "research": {
+      "parent": "monoguzte"
+    },
+    "category": "turret",
+    "drawer": {
+      "type": "DrawTurret",
+      "parts": [
+        {
+          "type": "RegionPart",
+          "under": true,
+          "y": -2,
+          "suffix": "-puller",
+          "moves": [
+            {
+              "type": "PartMove",
+              "progress": {
+                 "type": "warmup",
+                 "op": "curve",
+                 "interp": "sineOut"
+              },
+              "y": -8
+            },
+            {
+              "type": "PartMove",
+              "progress": {
+                 "type": "recoil",
+                 "op": "curve",
+                 "interp": "sineIn"
+              },
+              "y": 6
+            }
+          ]
+        },
+        {
+          "type": "RegionPart",
+          "suffix": "-string",
+          "x": 5.5,
+          "color": "FFA9A9",
+          "colorTo": "FFA9A9",
+          "progress": "warmup",
+          "y": 3.3,
+          "mirror": true,
+          "outline": false,
+          "layer": 110,
+          "growX": 1.3,
+          "growY": 2,
+          "yScl": 0,
+          "xScl": 0,
+          "moves": [
+            {
+              "y": -10,
+              "x": -1,
+              "progress": {
+                 "type": "warmup",
+                 "op": "curve",
+                 "interp": "sineOut"
+              },
+              "rot": 60,
+              "gx": 0.7,
+              "growProgress": "warmup"
+            },
+            {
+              "y": 10,
+              "x": 1,
+              "progress": {
+                 "type": "recoil",
+                 "op": "curve",
+                 "interp": "sineIn"
+              },
+              "rot": -60,
+              "gx": -0.7,
+              "growProgress": "recoil"
+            }
+          ]
+        },
+        {
+          "type": "RegionPart",
+          "suffix": "-frame",
+          "xScl": 0,
+          "growX": 1.5,
+          "y": 4.5,
+          "x": 6,
+          "color": "FFA9A9",
+          "colorTo": "FFA9A9",
+          "progress": "warmup",
+          "mirror": true,
+          "outline": false,
+          "layer": 110,
+          "moves": [
+            {
+              "y": -2,
+              "progress": {
+                 "type": "warmup",
+                 "op": "curve",
+                 "interp": "sineOut"
+              },
+              "rot": -20,
+              "growX": 5,
+              "growProgress": "warmup"
+            },
+            {
+              "y": 2,
+              "growX": -5,
+              "rot": 20,
+              "progress": {
+                 "type": "recoil",
+                 "op": "curve",
+                 "interp": "sineIn"
+              },
+              "growProgress": "recoil"
+            }
+          ]
+        },
+        {
+          "type": "RegionPart",
+          "suffix": "-lock",
+          "outline": false,
+          "color": "FFA9A9",
+          "colorTo": "FFA9A9",
+          "progress": "warmup",
+          "yScl": 0,
+          "growY": 1,
+          "layer": 110,
+          "y": 3.3,
+          "moves": [
+            {
+              "type": "PartMove",
+              "y": -15.8,
+              "progress": {
+                 "type": "warmup",
+                 "op": "curve",
+                 "interp": "sineOut"
+              }
+            },
+            {
+              "type": "PartMove",
+              "y": 15.8,
+              "progress": {
+                 "type": "recoil",
+                 "op": "curve",
+                 "interp": "sineIn"
+              }
+            }
+          ]
+        },
+        {
+          "type": "RegionPart",
+          "suffix": "-arrow",
+          "yScl": 2.7,
+          "xScl": 0,
+          "growX": 1,
+          "color": "FFA9A9",
+          "progress": {
+            "type": "warmup",
+            "op": "curve",
+            "interp": "sineOut"
+          },
+          "moveY": -15,
+          "y": 13,
+          "outline": false,
+          "layer": 110,
+          "moves": [
+            {
+              "type": "PartMove",
+              "y": 15,
+              "gx": -1,
+              "progress": {
+                 "type": "recoil",
+                 "op": "curve",
+                 "interp": "sineIn"
+              }
+            }
+          ]
+        }
+      ]
+    }
+}
