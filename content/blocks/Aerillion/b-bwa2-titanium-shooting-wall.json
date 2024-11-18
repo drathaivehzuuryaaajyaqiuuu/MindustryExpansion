@@ -1,0 +1,49 @@
+{
+  "type": "PowerTurret",
+  "targetAir": true,
+  "targetGround": true,
+  "buildCostMultiplier": 4,
+  "shootShake": 1,
+  "connectedPower": false,
+  "size": 2,
+  "ammoUseEffect": "casing1",
+  "liquidCapacity": 10,
+  "range": 96,
+  "health": 1630,
+  "reload": 4.28571428571,
+  "maxAmmo": 1,
+  "ammoPerShot": 1,
+  "recoil": 1,
+  "inaccuracy": 0,
+  "shootSound": "shoot",
+  "rotateSpeed": 2,
+  "shootType": {
+    "type": "BasicBulletType",
+    "damage": 0.02,
+    "splashDamage": 0.005,
+    "splashDamageRadius": 8,
+    "speed": 8,
+    "ammoMultiplier": 1,
+    "shootEffect": "shootSmall",
+    "smokeEffect": "shootSmallSmoke",
+    "lifetime": 12,
+    "width": 6,
+    "height": 10,
+    "hitEffect": "flakExplosion"
+  },
+  "requirements": [
+    "titanium/32",
+    "lead/10"
+  ],
+  "category": "defense",
+  "drawer": {
+    "type": "DrawTurret",
+    "basePrefix": "-base"
+},
+"research": {
+  "parent": "copper-shooting-wall",
+  "requirements": [
+    "titanium/720"
+  ]
+}
+}  
