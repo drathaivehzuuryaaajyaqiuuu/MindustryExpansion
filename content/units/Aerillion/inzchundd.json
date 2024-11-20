@@ -1,46 +1,15 @@
 {   
     "armor": 1,
     "speed": 6,
-    "singleTarget": true,
     "health": 150,
-    "hitSize": 32,
-    "targetAir": true,
+    "hitSize": 23,
     "rotateSpeed": 10,
     "flying": true,
-    "range": 104,
+    "range": 160,
+    "lowAltitude": true,
+    "faceTarget": true,
     "engineSize": 0,
     "weapons": [ 
-        {
-            "name": "inzchundd-body",
-            "alwaysShooting": true,
-            "reload": 60,
-            "x": 0,
-            "y": 0,
-            "display": false,
-            "recoil": 0,
-            "controllable": false,
-            "aiControllable": false,
-            "mirror": false,
-            "layerOffset": -0.001,
-            "shootSound": "none",
-            "bullet": {
-                "type": "BulletType",
-                "shootEffect": "none",
-                "smokeEffect": "none",
-                "despawnEffect": "none"
-            },
-            "parts": [
-                {
-                "type": "RegionPart",
-                "suffix": "-rotary",
-                "under": true,
-                "progress": "reload",
-                "moveRot": 360,
-                "x": 0,
-                "y": 0
-                }
-            ]
-        },
         {
             "name": "inzchun-weapon",
             "layerOffset": -0.001,
@@ -53,6 +22,7 @@
             "alwaysContinuous": true,
             "shootY": 10,
             "shootSound": "beam",
+            "predictTarget": false,
             "inaccuracy": 0,
             "bullet": {
                 "type": "ContinuousFlameBulletType",
@@ -65,13 +35,50 @@
                     "f7022a",
                     "ffffff"
                 ],
-                "damage": 1.25,
+                "damage": 2.2,
                 "flareRotSpeed": 2,
                 "flareWidth": 8,
                 "flareLength": 30,
-                "hitEffect": "hitFlameSmall",
-                "range": 160
+                "hitEffect": "hitFlameSmall"
             }
+        },
+        {
+            "name": "inzchundd-body",
+            "alwaysShooting": true,
+            "reload": 60,
+            "x": 0,
+            "y": 0,
+            "display": false,
+            "recoil": 0,
+            "controllable": false,
+            "aiControllable": false,
+            "mirror": false,
+            "layerOffset": -0.001,
+            "useAmmo": false,
+            "predictTarget": false,
+            "useAttackRange": false,
+            "noAttack": false,
+            "ignoreRotation": true,
+            "shootSound": "none",
+            "bullet": {
+                "type": "BulletType",
+                "shootEffect": "none",
+                "smokeEffect": "none",
+                "despawnEffect": "none",
+                "hitEffect": "none",
+                "damage": 0
+            },
+            "parts": [
+                {
+                "type": "RegionPart",
+                "suffix": "-rotary",
+                "under": true,
+                "progress": "reload",
+                "moveRot": 360,
+                "x": 0,
+                "y": 0
+                }
+            ]
         }
     ],
     "--comment": "thx to liz for helping the rotary body"

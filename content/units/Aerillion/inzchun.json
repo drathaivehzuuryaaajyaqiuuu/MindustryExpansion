@@ -2,44 +2,14 @@
     "armor": 1,
     "speed": 6,
     "health": 150,
-    "hitSize": 32,
-    "targetAir": true,
+    "hitSize": 23,
     "rotateSpeed": 10,
     "flying": true,
+    "lowAltitude": true,
+    "faceTarget": true,
     "range": 110,
     "engineSize": 0,
-    "weapons": [ 
-        {
-            "name": "inzchun-body",
-            "alwaysShooting": true,
-            "reload": 60,
-            "x": 0,
-            "y": 0,
-            "display": false,
-            "recoil": 0,
-            "controllable": false,
-            "aiControllable": false,
-            "mirror": false,
-            "layerOffset": -0.001,
-            "shootSound": "none",
-            "bullet": {
-                "type": "BulletType",
-                "shootEffect": "none",
-                "smokeEffect": "none",
-                "despawnEffect": "none"
-            },
-            "parts": [
-                {
-                "type": "RegionPart",
-                "suffix": "-rotary",
-                "under": true,
-                "progress": "reload",
-                "moveRot": 360,
-                "x": 0,
-                "y": 0
-                }
-            ]
-        },
+    "weapons": [
         {
             "name": "inzchun-weapon",
             "layerOffset": -0.001,
@@ -55,7 +25,8 @@
                 "height": 12,
                 "lifetime": 15,
                 "speed": 8,
-                "damage": 2,
+                "damage": 2.5,
+                "buildingDamageMultiplier": 0.5,
                 "shootEffect": "shootSmall",
                 "smokeEffect": "shootBigSmoke"
             },
@@ -63,6 +34,44 @@
                 "shots": 30,
                 "shotDelay": 1
             }
+        }, 
+        {
+            "name": "inzchun-body",
+            "alwaysShooting": true,
+            "reload": 60,
+            "x": 0,
+            "y": 0,
+            "display": false,
+            "recoil": 0,
+            "controllable": false,
+            "aiControllable": false,
+            "mirror": false,
+            "layerOffset": -0.001,
+            "useAmmo": false,
+            "predictTarget": false,
+            "useAttackRange": false,
+            "noAttack": false,
+            "ignoreRotation": true,
+            "shootSound": "none",
+            "bullet": {
+                "type": "BulletType",
+                "shootEffect": "none",
+                "smokeEffect": "none",
+                "despawnEffect": "none",
+                "hitEffect": "none",
+                "damage": 0
+            },
+            "parts": [
+                {
+                "type": "RegionPart",
+                "suffix": "-rotary",
+                "under": true,
+                "progress": "reload",
+                "moveRot": 360,
+                "x": 0,
+                "y": 0
+                }
+            ]
         }
     ],
     "--comment": "thx to liz for helping the rotary body"
