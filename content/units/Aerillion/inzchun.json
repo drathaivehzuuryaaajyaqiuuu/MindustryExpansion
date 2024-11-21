@@ -50,7 +50,7 @@
             "useAmmo": false,
             "predictTarget": false,
             "useAttackRange": false,
-            "noAttack": false,
+            "noAttack": true,
             "ignoreRotation": true,
             "shootSound": "none",
             "bullet": {
