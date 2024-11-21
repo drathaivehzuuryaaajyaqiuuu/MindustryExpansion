@@ -1,0 +1,300 @@
+{
+    "type": "ItemTurret",
+    "targetAir": false,
+    "targetGround": true,
+    "size": 1,
+    "ammoUseEffect": "none",
+    "range": 112,
+    "health": 280,
+    "coolantMultiplier": 6,
+    "reload": 60,
+    "maxAmmo": 30,
+    "recoil": 0,
+    "inaccuracy": 2,
+    "shootSound": "shootSmite",
+    "rotateSpeed": 4.5,
+    "ammoTypes": {
+      "copper": {
+        "type": "BasicBulletType",
+        "damage": 22,
+        "speed": 3,
+        "shrinkY": 0,
+        "ammoMultiplier": 1,
+        "hitSize": 5,
+        "shootEffect": {
+            "type": "ParticleEffect",
+            "colorFrom": "f9c27aff",
+            "colorTo": "f9c27aff",
+            "particles": 10,
+            "cone": 15,
+            "length": 25,
+            "interp": "sineOut",
+            "casingFlip": true,
+            "lightScl": 0.4,
+            "line": true,
+            "strokeFrom": 2,
+            "strokeTo": 0,
+            "lenFrom": 6,
+            "lenTo": 0,
+            "lifetime": 30,
+            "baseRotation": 180
+        },
+        "smokeEffect": "none",
+        "lifetime": 37.3333,
+        "width": 10,
+        "height": 20,        
+        "despawnEffect": [
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27aff",
+                "colorTo": "f9c27aff",
+                "particles": 10,
+                "cone": 15,
+                "length": 25,
+                "interp": "sineOut",
+                "casingFlip": true,
+                "lightScl": 0.4,
+                "line": true,
+                "strokeFrom": 2,
+                "strokeTo": 0,
+                "lenFrom": 6,
+                "lenTo": 0,
+                "lifetime": 30,
+                "baseRotation": 180
+            },
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27aff",
+                "colorTo": "f9c27aff",
+                "particles": 4,
+                "length": 25,
+                "interp": "sineOut",
+                "casingFlip": true,
+                "lightScl": 0.4,
+                "line": true,
+                "strokeFrom": 0.9,
+                "strokeTo": 0,
+                "lenFrom": 6,
+                "lenTo": 0,
+                "lifetime": 30
+            }
+        ],
+        "hitEffect": [
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27aff",
+                "colorTo": "f9c27aff",
+                "particles": 10,
+                "cone": 15,
+                "length": 25,
+                "interp": "sineOut",
+                "casingFlip": true,
+                "lightScl": 0.4,
+                "line": true,
+                "strokeFrom": 2,
+                "strokeTo": 0,
+                "lenFrom": 6,
+                "lenTo": 0,
+                "lifetime": 30,
+                "baseRotation": 180
+            },
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27aff",
+                "colorTo": "f9c27aff",
+                "particles": 4,
+                "length": 25,
+                "interp": "sineOut",
+                "casingFlip": true,
+                "lightScl": 0.4,
+                "line": true,
+                "strokeFrom": 0.9,
+                "strokeTo": 0,
+                "lenFrom": 6,
+                "lenTo": 0,
+                "lifetime": 30
+            }
+        ],
+        "sprite": "mindustry-expansion-spikeammo",
+        "frontColor": "f9c27aff"
+      },
+      "lead": {
+        "type": "BasicBulletType",
+        "damage": 31,
+        "shrinkY": 0,
+        "ammoMultiplier": 1,
+        "hitSize": 5,
+        "speed": 3,
+        "shootEffect": {
+            "type": "ParticleEffect",
+            "colorFrom": "f9c27aff",
+            "colorTo": "f9c27aff",
+            "particles": 10,
+            "cone": 15,
+            "length": 25,
+            "interp": "sineOut",
+            "casingFlip": true,
+            "lightScl": 0.4,
+            "line": true,
+            "strokeFrom": 2,
+            "strokeTo": 0,
+            "lenFrom": 6,
+            "lenTo": 0,
+            "lifetime": 30,
+            "baseRotation": 180
+        },
+        "smokeEffect": "none",
+        "lifetime": 37.3333,
+        "width": 10,
+        "height": 20,
+        "despawnEffect": [
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27aff",
+                "colorTo": "f9c27aff",
+                "particles": 10,
+                "cone": 15,
+                "length": 25,
+                "interp": "sineOut",
+                "casingFlip": true,
+                "lightScl": 0.4,
+                "line": true,
+                "strokeFrom": 2,
+                "strokeTo": 0,
+                "lenFrom": 6,
+                "lenTo": 0,
+                "lifetime": 30,
+                "baseRotation": 180
+            },
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27aff",
+                "colorTo": "f9c27aff",
+                "particles": 4,
+                "length": 25,
+                "interp": "sineOut",
+                "casingFlip": true,
+                "lightScl": 0.4,
+                "line": true,
+                "strokeFrom": 0.9,
+                "strokeTo": 0,
+                "lenFrom": 6,
+                "lenTo": 0,
+                "lifetime": 30
+            }
+        ],
+        "hitEffect": [
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27aff",
+                "colorTo": "f9c27aff",
+                "particles": 10,
+                "cone": 15,
+                "length": 25,
+                "interp": "sineOut",
+                "casingFlip": true,
+                "lightScl": 0.4,
+                "line": true,
+                "strokeFrom": 2,
+                "strokeTo": 0,
+                "lenFrom": 6,
+                "lenTo": 0,
+                "lifetime": 30,
+                "baseRotation": 180
+            },
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27aff",
+                "colorTo": "f9c27aff",
+                "particles": 4,
+                "length": 25,
+                "interp": "sineOut",
+                "casingFlip": true,
+                "lightScl": 0.4,
+                "line": true,
+                "strokeFrom": 0.9,
+                "strokeTo": 0,
+                "lenFrom": 6,
+                "lenTo": 0,
+                "lifetime": 30
+            }
+        ],
+        "pierce": true,
+        "pierceCap": 3,
+        "pierceDamageFactor": 0.3,
+        "sprite": "mindustry-expansion-spikeammo",
+        "frontColor": "f9c27aff"
+      }
+    },
+    "consumes": {
+      "coolant": {
+        "amount": 0.1
+      }
+    },
+    "requirements": [
+      "copper/50",
+      "lead/40"
+    ],
+    "category": "turret",
+    "drawer": {
+        "type": "DrawTurret",
+        "parts": [
+            {
+                "type": "RegionPart",
+                "suffix": "-rail"
+            },
+            {
+                "type": "RegionPart",
+                "suffix": "-fling",
+                "mirror": true,
+                "x": 0.2,
+                "moveY": 4,
+                "progress": {
+                    "type": "recoil",
+                    "op": "curve",
+                    "interp": "bounceIn"
+                }
+            },
+            {
+                "type": "RegionPart",
+                "name": "mindustry-expansion-spikeammo",
+                "moveY": -4,
+                "color": "f9c27aff",
+                "colorTo": "f9c27aff",
+                "progress": {
+                    "type": "reload",
+                    "ops": [
+                        {
+                            "op": "curve",
+                            "interp": "exp5In"
+                        },
+                        {
+                            "op": "compress",
+                            "start": 0.5,
+                            "end": 1.0
+                        }
+                    ]
+                },
+                "layer": 110,
+                "xScl": 1.2,
+                "yScl": 2,
+                "growX": -1.2,
+                "growProgress": {
+                    "type": "reload",
+                    "ops": [
+                        {
+                            "op": "curve",
+                            "interp": "exp5In"
+                        },
+                        {
+                            "op": "compress",
+                            "start": 0.5,
+                            "end": 1.0
+                        }
+                    ]
+                },
+                "outline": false
+            }
+        ]
+    }
+}
