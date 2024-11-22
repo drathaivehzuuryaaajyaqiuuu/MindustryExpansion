@@ -17,6 +17,7 @@
       "copper": {
         "type": "BasicBulletType",
         "damage": 22,
+        "collidesAir": false,
         "speed": 3,
         "shrinkY": 0,
         "ammoMultiplier": 1,
@@ -123,6 +124,7 @@
         "damage": 31,
         "shrinkY": 0,
         "ammoMultiplier": 1,
+        "collidesAir": false,
         "hitSize": 5,
         "speed": 3,
         "shootEffect": {
