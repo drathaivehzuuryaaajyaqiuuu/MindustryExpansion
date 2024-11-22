@@ -1,0 +1,530 @@
+{
+   "type": "ItemTurret",
+    "targetAir": false,
+    "targetGround": true,
+    "size": 2,
+    "ammoUseEffect": "casing2Double",
+    "range": 80,
+    "health": 890,
+    "reload": 120,
+    "maxAmmo": 4,
+    "recoil": 0,
+    "inaccuracy": 0,
+    "shootCone": 361,
+    "shootSound": "mchgun",
+    "rotateSpeed": 0,
+    "shoot": {
+        "type": "ShootMulti",
+        "source": {
+            "type": "ShootBarrel",
+            "shots": 8,
+            "barrels": [
+                0, 0, 0,
+                8, 0, -45,
+                8, -8, -90,
+                8, -16, -135,
+                0, -16, -180,
+                -8, 0, 45,
+                -8, -8, 90,
+                -8, -16, 135
+            ]
+        },
+        "dest" : [
+            {
+                "type": "ShootMulti",
+                "source":             
+                {
+                    "type": "ShootSpread",
+                    "shots": 3,
+                    "spread": 22.5
+                },
+                "dest": [           
+                    {
+                        "shots": 3,
+                        "shotDelay": 5
+                    }
+                ]
+            }
+        ]
+    },
+    "ammoTypes": {
+      "copper": {
+        "damage": 15,
+        "speed": 8,
+        "ammoMultiplier": 1,
+        "lifetime": 10,
+        "width": 5,
+        "height": 14,
+        "shootEffect": {
+            "type": "ParticleEffect",
+            "colorFrom": "f9c27a",
+            "colorTo": "f9c27aff",
+            "cone": 45,
+            "length": 16,
+            "interp": "sineOut",
+            "lightScl": 0.3,
+            "lightColor": "f9c27aff",
+            "line": true,
+            "strokeFrom": 1,
+            "lenFrom": 4,
+            "lenTo": 0
+        },
+        "despawnEffect": [
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "cone": 45,
+                "length": 16,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180
+            },
+            {
+                "type": "WaveEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "sizeTo": 8,
+                "interp": "exp5Out",
+                "lightScl": 0.8,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180,
+                "lifetime": 20
+            },
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "length": 8,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "lenTo": 0,
+                "sizeFrom": 0.8
+            }
+        ],
+        "hitEffect": [
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "cone": 45,
+                "length": 16,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180
+            },
+            {
+                "type": "WaveEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "sizeTo": 8,
+                "interp": "exp5Out",
+                "lightScl": 0.8,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180,
+                "lifetime": 20
+            },
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "length": 8,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "lenTo": 0,
+                "sizeFrom": 0.8
+            }
+        ]
+      },
+      "scrap": {
+        "damage": 9,
+        "speed": 8,
+        "ammoMultiplier": 1.4,
+        "lifetime": 10,
+        "width": 5,
+        "height": 14,
+        "reloadMultiplier": 1.4,
+        "shootEffect": {
+            "type": "ParticleEffect",
+            "colorFrom": "f9c27a",
+            "colorTo": "f9c27aff",
+            "cone": 45,
+            "length": 16,
+            "interp": "sineOut",
+            "lightScl": 0.3,
+            "lightColor": "f9c27aff",
+            "line": true,
+            "strokeFrom": 1,
+            "lenFrom": 4,
+            "lenTo": 0
+        },
+        "despawnEffect": [
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "cone": 45,
+                "length": 16,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180
+            },
+            {
+                "type": "WaveEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "sizeTo": 8,
+                "interp": "exp5Out",
+                "lightScl": 0.8,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180,
+                "lifetime": 20
+            },
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "length": 8,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "lenTo": 0,
+                "sizeFrom": 0.8
+            }
+        ],
+        "hitEffect": [
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "cone": 45,
+                "length": 16,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180
+            },
+            {
+                "type": "WaveEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "sizeTo": 8,
+                "interp": "exp5Out",
+                "lightScl": 0.8,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180,
+                "lifetime": 20
+            },
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "length": 8,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "lenTo": 0,
+                "sizeFrom": 0.8
+            }
+        ]
+      },
+      "lead": {
+        "damage": 15,
+        "speed": 8,
+        "ammoMultiplier": 1.4,
+        "lifetime": 10,
+        "width": 5,
+        "height": 14,
+        "reloadMultiplier": 1.4,
+        "pierceArmor": true,
+        "status": "slow",
+        "statusDuration": 40,
+        "shootEffect": {
+            "type": "ParticleEffect",
+            "colorFrom": "f9c27a",
+            "colorTo": "f9c27aff",
+            "cone": 45,
+            "length": 16,
+            "interp": "sineOut",
+            "lightScl": 0.3,
+            "lightColor": "f9c27aff",
+            "line": true,
+            "strokeFrom": 1,
+            "lenFrom": 4,
+            "lenTo": 0
+        },
+        "despawnEffect": [
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "cone": 45,
+                "length": 16,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180
+            },
+            {
+                "type": "WaveEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "sizeTo": 8,
+                "interp": "exp5Out",
+                "lightScl": 0.8,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180,
+                "lifetime": 20
+            },
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "length": 8,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "lenTo": 0,
+                "sizeFrom": 0.8
+            }
+        ],
+        "hitEffect": [
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "cone": 45,
+                "length": 16,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180
+            },
+            {
+                "type": "WaveEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "sizeTo": 8,
+                "interp": "exp5Out",
+                "lightScl": 0.8,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180,
+                "lifetime": 20
+            },
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "length": 8,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "lenTo": 0,
+                "sizeFrom": 0.8
+            }
+        ]
+      },
+      "titanium": {
+        "damage": 20,
+        "speed": 8,
+        "ammoMultiplier": 1,
+        "lifetime": 10,
+        "width": 5,
+        "height": 14,
+        "reloadMultiplier": 0.4,
+        "pierceArmor": true,
+        "statusDuration": 40,
+        "shootEffect": {
+            "type": "ParticleEffect",
+            "colorFrom": "f9c27a",
+            "colorTo": "f9c27aff",
+            "cone": 45,
+            "length": 16,
+            "interp": "sineOut",
+            "lightScl": 0.3,
+            "lightColor": "f9c27aff",
+            "line": true,
+            "strokeFrom": 1,
+            "lenFrom": 4,
+            "lenTo": 0
+        },
+        "despawnEffect": [
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "cone": 45,
+                "length": 16,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180
+            },
+            {
+                "type": "WaveEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "sizeTo": 8,
+                "interp": "exp5Out",
+                "lightScl": 0.8,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180,
+                "lifetime": 20
+            },
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "length": 8,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "lenTo": 0,
+                "sizeFrom": 0.8
+            }
+        ],
+        "hitEffect": [
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "cone": 45,
+                "length": 16,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180
+            },
+            {
+                "type": "WaveEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "sizeTo": 8,
+                "interp": "exp5Out",
+                "lightScl": 0.8,
+                "lightColor": "f9c27aff",
+                "line": true,
+                "strokeFrom": 1,
+                "lenFrom": 4,
+                "lenTo": 0,
+                "rotWithParent": true,
+                "baseRotation": 180,
+                "lifetime": 20
+            },
+            {
+                "type": "ParticleEffect",
+                "colorFrom": "f9c27a",
+                "colorTo": "f9c27aff",
+                "length": 8,
+                "interp": "sineOut",
+                "lightScl": 0.3,
+                "lightColor": "f9c27aff",
+                "lenTo": 0,
+                "sizeFrom": 0.8
+            }
+        ]
+      }
+    },
+    "requirements": [
+      "copper/120",
+      "silicon/65",
+      "titanium/50"
+    ],
+    "category": "turret",
+    "drawer": {
+        "type": "DrawTurret",
+        "parts": [
+            {
+                "type": "RegionPart",
+                "suffix": "-spinner",
+                "moveRot": -360,
+                "outlineLayerOffset": 0.1,
+                "progress": {
+                    "type": "reload",
+                    "op": "curve",
+                    "interp": "bounceIn"
+                }
+            }
+        ]
+    }
+}
