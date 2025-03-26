@@ -1,4 +1,4 @@
-# ME - Mindustry Expansion [Early Access]
+# ME - Mindustry Expansion [End Of E.R.A]
 
 <p align="center"><img src="icon.png" alt="logo" width="200"></p>
 
